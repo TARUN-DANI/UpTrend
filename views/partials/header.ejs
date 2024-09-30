@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylsheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 text-black font-[hel] w-full h-full">
+    <nav class="fixed z-20 w-full flex justify-between px-6 py-4 neumorphic-header">
+        <h1 class="text-3xl font-bold text-gray-900">
+            <a href="/home">UpTrend</a>
+        </h1>
+    
+        <!-- Hamburger Icon for all screen sizes -->
+        <%var loggedin= typeof loggedin!=="undefined"?loggedin : true %>
+        <%if(loggedin){%>
+        <div class="lg:hidden">
+            <button id="hamburger-btn" class= "text-gray-900 text-3xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    
+        <!-- Navbar Links (hidden by default, shown with JS) -->
+        <div id="desktop-menu" class="hidden lg:flex gap-6 items-center">
+            <a href="/home" class="neumorphic-btn">Home</a>
+            <a href="/shop" class="neumorphic-btn">Shop</a>
+            <a href="/cart" class="neumorphic-btn">Cart</a>
+            <a href="/account" class="neumorphic-btn">My Account</a>
+            <a href="/users/logout" class="text-red-500 text-lg font-medium neumorphic-btn">Logout</a>
+        </div>
+    
+        <!-- Responsive Menu (visible on small screens) -->
+        <div id="mobile-menu" class="fixed inset-0 bg-gray-100 p-6 transform -translate-x-full transition-transform duration-300 ease-in-out">
+            <button id="close-btn" class="text-3xl text-gray-900 mb-6 focus:outline-none">
+                <i class="fas fa-times"></i>
+            </button>
+            <nav class="flex flex-col space-y-4">
+                <a href="/home" class="neumorphic-btn">Home</a>
+                <a href="/shop" class="neumorphic-btn">Shop</a>
+                <a href="/cart" class="neumorphic-btn">Cart</a>
+                <a href="/account" class="neumorphic-btn">My Account</a>
+                <a href="/users/logout" class="text-red-500 text-lg font-medium neumorphic-btn">Logout</a>
+            </nav>
+        </div>
+        <%}%>
+    </nav>
+    

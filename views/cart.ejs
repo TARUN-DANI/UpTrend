@@ -1,0 +1,78 @@
+<%- include('./partials/header') %>
+
+<div class="min-h-screen bg-gray-100 py-10 flex flex-col items-center">
+    <div class="w-full max-w-6xl p-6 bg-white rounded-lg shadow-neomorphic">
+        <h2 class="text-2xl font-bold m-8 text-center">Shopping Cart</h2>
+        <% if (user.cart.length > 0) { %>
+            <% const count = {}; let i = -1; %>
+            <% user.cart.forEach(function(cart) {%>
+                <%count[cart] = (count[cart] || 0) + 1;%>
+            <%}); %>
+            <% const uniqueCart = [...new Set(user.cart)]; %>
+            <% uniqueCart.forEach(function(cart) {%>
+                <%i++;%>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 m-10">
+                    <!-- Left Column (Product Section) -->
+                    <div class="bg-gray-100 rounded-lg shadow-neumorphic grid-item"
+                         data-bgcolor="#<%= cart.bgcolor %>"
+                         data-panelcolor="#<%= cart.panelcolor %>"
+                         data-textcolor="#<%= cart.textcolor %>">
+                        <div class="w-full h-56 flex items-center justify-center rounded-t-lg overflow-hidden shadow-neumorphic-inner">
+                            <img class="w-full h-full object-contain"
+                                 src="data:image/jpeg;base64,<%= cart.image.toString('base64') %>"
+                                 alt="">
+                        </div>
+                        <div class="flex justify-between items-center px-4 py-4 rounded-b-lg shadow-neumorphic-inner">
+                            <div>
+                                <h3 class="text-lg font-semibold"><%= cart.name %></h3>
+                                <h4 class="text-md">₹ <%= cart.price %></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Column (Price Breakdown Section) -->
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-neumorphic">
+                        <h3 class="text-xl font-semibold mb-4">Price Breakdown</h3>
+                        <div class="flex justify-between mb-2" >
+                            <span>Total Quantity:</span>
+                            <span><%= count[cart] %></span>
+                        </div>
+                        <div class="flex justify-between mb-2">
+                            <span>Total MRP:</span>
+                            <span>₹ <%= cart.price * count[cart] %></span>
+                        </div>
+                        <div class="flex justify-between mb-2">
+                            <span>Discount on MRP:</span>
+                            <span>₹ <%= cart.discount %></span>
+                        </div>
+                        <div class="flex justify-between mb-2">
+                            <span>Platform Fee:</span>
+                            <span>₹50</span>
+                        </div>
+                        <div class="flex justify-between mb-2">
+                            <span>Shipping Fee:</span>
+                            <span>FREE</span>
+                        </div>
+                        <div class="flex justify-between text-lg font-bold text-green-500">
+                            <span>Total Price:</span>
+                            <span><%= bill[i] %></span>
+                        </div>
+                        <!-- Checkout Button -->
+                        <div class="mt-6">
+                            <button class="neumorphic-btn1 neumorphic-btn-blue px-6 py-3 font-semibold rounded-lg w-full">
+                                Checkout
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <div class="col-span-full flex justify-center items-center">
+                <h1 class="text-2xl font-semibold text-gray-600 bg-gray-200 py-10 px-20 rounded-lg shadow-md neomorphic-card">
+                   No Items Added To Cart
+                </h1>
+            </div>
+        <% } %>
+    </div>
+</div>
+
+<%- include('./partials/footer') %>

@@ -1,0 +1,218 @@
+/* Styles for Hamburger Icon */
+#hamburger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e0e0e5;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 
+                -4px -4px 8px rgba(255, 255, 255, 0.7);
+    transition: box-shadow 0.3s ease;
+}
+
+#hamburger-btn:hover {
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), 
+                inset -2px -2px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Styles for Desktop Menu (Hidden by default) */
+#desktop-menu {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    #desktop-menu {
+        display: flex; /* Show desktop menu on large screens */
+    }
+}
+
+/* Styles for Mobile Menu */
+#mobile-menu {
+    background: #f0f0f3;
+    box-shadow: inset 8px 8px 15px rgba(0, 0, 0, 0.2), 
+                inset -8px -8px 15px rgba(255, 255, 255, 0.7);
+}
+
+#mobile-menu a {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+#mobile-menu a:hover {
+    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.1), 
+                inset -3px -3px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Neomorphic Header */
+.neumorphic-header {
+    background: #f0f0f3;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2), 
+                -8px -8px 15px rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+body{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+/* Blue Neumorphic Button */
+.neumorphic-btn-blue {
+    background: #3490dc; /* Blue background */
+    color: white; /* White text color */
+}
+
+/* Base neumorphic button styles */
+.neumorphic-btn1 {
+    color: black;
+    border: none;
+    outline: none;
+    background: #e0e0e0; /* Light background color */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.9); /* Neumorphic shadow */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.neumorphic-btn1:hover {
+    background: #d0d0d0; /* Slightly darker background on hover */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), -4px -4px 8px rgba(255, 255, 255, 0.8); /* Hover shadow */
+}
+
+
+.neumorphic-btn-blue:hover {
+    background: #2779bd; /* Darker blue on hover */
+}
+
+/* Neomorphic Button */
+.neumorphic-btn {
+    background: #e0e0e5;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), 
+                -5px -5px 10px rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.neumorphic-btn:hover {
+    /* background: rgba(135, 207, 235, 0.726); */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+                inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Neomorphic Card */
+.neomorphic-card {
+    background: #e0e0e5;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 
+                -10px -10px 20px rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    margin: 10px;
+}
+
+/* Sidebar and Main Content */
+aside {
+    padding: 1rem;
+}
+
+main {
+    padding: 1.5rem;
+}
+
+/* Additional Neomorphic Shadows */
+.shadow-neumorphic {
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2), 
+                -8px -8px 15px rgba(255, 255, 255, 0.7);
+}
+
+.shadow-neumorphic-inner {
+    box-shadow: inset 8px 8px 15px rgba(0, 0, 0, 0.2), 
+                inset -8px -8px 15px rgba(255, 255, 255, 0.7);
+}
+
+.shadow-neumorphic-btn {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 
+                -4px -4px 8px rgba(255, 255, 255, 0.7);
+}
+
+/* Grid Item */
+.grid-item {
+    min-height: 300px; /* Adjust the height as needed */
+}
+
+/* Background Color */
+.bg-gray-100 {
+    background-color: #f5f5f5;
+}
+/* Main Section Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f3;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2), 
+                -8px -8px 15px rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+}
+
+/* Neomorphic Button Blue */
+.neumorphic-btn-blue {
+    background: #3490dc; /* Blue background */
+    color: white; /* White text color */
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), 
+                -5px -5px 10px rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.neumorphic-btn-blue:hover {
+    background: #2779bd; /* Darker blue on hover */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+                inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Featured Products Section */
+.grid-item {
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-8px); /* Lift on hover */
+}
+
+/* Neomorphic Shadows */
+.shadow-neumorphic {
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2), 
+                -8px -8px 15px rgba(255, 255, 255, 0.7);
+}
+
+.shadow-neumorphic-inner {
+    box-shadow: inset 8px 8px 15px rgba(0, 0, 0, 0.2), 
+                inset -8px -8px 15px rgba(255, 255, 255, 0.7);
+}
+.update,.upload{
+    background-color: #ffd500a9;
+    color: black;
+    width: 11rem;
+    font-weight: bold;
+}
+.upload{
+    width: 6rem;
+}
+.update:hover,.upload:hover{
+    background-color: #ffd700;
+}
+footer {
+    background: #f0f0f3;
+    box-shadow: inset 8px 8px 15px rgba(0, 0, 0, 0.2), 
+                inset -8px -8px 15px rgba(255, 255, 255, 0.7);
+    border-radius: 25px 25px 0 0;
+    padding: 2rem 0;
+}

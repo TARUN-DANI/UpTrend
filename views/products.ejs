@@ -1,0 +1,48 @@
+<%- include('./partials/header') %>
+<% if(success.length > 0){ %>
+    <div class=" z-40 fixed top-5 left-1/2 transform -translate-x-1/2 p-3 rounded-md bg-blue-500 shadow-neumorphic">
+        <span class="inline-block text-white">
+            <%= success %>
+        </span>
+    </div>
+<% } %>
+<div class="relative z-10 min-h-screen flex flex-col lg:flex-row gap-8 bg-gray-100 px-6 py-32">
+    <!-- Sidebar for Sort and Filters -->
+   
+
+    <!-- Product Showcase Section -->
+    <div class="w-full lg:h-1/4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <% if(products.length > 0) { %>
+            <% products.forEach(function(product) { %>
+                <div class="bg-gray-100 rounded-lg shadow-neumorphic grid-item"
+                     data-bgcolor="#<%= product.bgcolor %>"
+                     data-panelcolor="#<%= product.panelcolor %>"
+                     data-textcolor="#<%= product.textcolor %>">
+                    <div class="w-full h-52 flex items-center justify-center rounded-t-lg overflow-hidden shadow-neumorphic-inner">
+                        <img class="w-full h-full object-contain"
+                             src="data:image/jpeg;base64,<%= product.image.toString('base64') %>" alt="">
+                    </div>
+                    <div class="flex justify-between items-center px-4 py-4 rounded-b-lg shadow-neumorphic-inner">
+                        <div>
+                            <h3 class="text-lg font-semibold">
+                                <%= product.name %>
+                            </h3>
+                            <h4 class="text-md">₹ <%= product.price %></h4>
+                        </div>
+                        <a class="w-7 h-7 flex items-center justify-center rounded-full bg-white shadow-neumorphic-btn" href="/delete/<%=product._id%>">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <div class="col-span-full flex justify-center items-center">
+                <h1 class="text-2xl font-semibold text-gray-600 bg-gray-200 py-10 px-20 rounded-lg shadow-md neomorphic-card">
+                    No Items Available
+                </h1>
+            </div>
+        <% } %>
+    </div>
+</div>
+
+<%- include('./partials/footer') %>
