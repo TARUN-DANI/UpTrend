@@ -11,7 +11,7 @@ const productsRouter = require('./routes/productsRouter');
 const indexRouter= require('./routes/index');
 
 const db =require('./config/mongoose-connection');
-const port =5000;
+const port =process.env.PORT || 5000;
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
