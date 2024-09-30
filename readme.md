@@ -59,9 +59,6 @@ Use **Postman** to test all API routes. Ensure proper tokens are used for protec
 ## 👤 Author
 Developed by Tarun Dani.
 
-## 🌐 Live Demo
-Check out the live version of the website at [link_to_live_website](link_to_live_website).
-
 ## 📧 Contact
 For inquiries, feel free to reach out to [TARUNDANI2005@outlook.com](mailto:TARUNDANI2005@outlook.com).
 
