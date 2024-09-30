@@ -29,6 +29,4 @@ app.use("/", indexRouter);
 app.use("/owners",ownersRouter);
 app.use("/users",usersRouter);
 app.use("/products",productsRouter);
-app.listen(port,(err)=>{
-    console.log(`server is running on http://localhost:${port}`);  
-})
+app.listen();
