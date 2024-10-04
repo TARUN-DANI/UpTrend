@@ -33,13 +33,25 @@ Uptrend is a feature-packed e-commerce website tailored for selling bags, design
 ```json
 {
     "bcrypt": "^5.1.1",
+    "config": "^3.3.12",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.6",
+    "debug": "^4.3.7",
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "express-session": "^1.18.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.6.0",
+    "mongoose": "^8.6.1",
     "multer": "^1.4.5-lts.1"
 }
+```
+
+## 🔧 Dev Dependencies
+```json
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.11"
 ```
 
 ## 🔄 API Testing with Postman
