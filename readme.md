@@ -1,7 +1,7 @@
 # UpTrend: The Ultimate Bag Selling E-Commerce Website
 
 ## 🌟 Overview
-Uptrend is a feature-packed e-commerce website tailored for selling bags, designed with a responsive and eye-catching **neumorphic theme**. It comes with a complete user authentication and authorization system and offers a seamless shopping experience through a fully functional cart, account management, and more.
+Uptrend is a feature-packed e-commerce website, designed with a responsive and eye-catching **neumorphic theme**. It comes with a complete user authentication and authorization system and offers a seamless shopping experience through a fully functional cart, account management, and more.
 
 ## 🛠️ Tech Stack
 - **Frontend**: EJS (Embedded JavaScript)
