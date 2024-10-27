@@ -9,6 +9,10 @@ router.get("/",function(req,res){
     let error = req.flash("error");
     res.render("index",{error,loggedin:false});
 });
+router.get("/signup",function(req,res){
+    let error = req.flash("error");
+    res.render("signup",{error,loggedin:false});
+});
 
 router.get("/shop",isloggedIn,async function(req,res){
     let products = await productModel.find();
