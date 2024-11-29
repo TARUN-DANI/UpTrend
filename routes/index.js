@@ -33,6 +33,10 @@ router.post('/uploadprofile',isloggedIn,profileUpload.single("image"), async (re
 router.post('/update',isloggedIn, async (req, res) => {
     let {fullname,age,contact}=req.body;
     const update = {fullname,age,contact};
+    if(req.contact<10){
+        req.flash("error","contact number length is <10");
+        res.redirect("/uploadprofile");
+    }
     let user = await userModel.findOneAndUpdate({email:req.user.email},update);
     await user.save();
     res.redirect('home');
